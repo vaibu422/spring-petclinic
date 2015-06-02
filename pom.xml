@@ -413,6 +413,7 @@
 		        <executions>
 		          <execution>
 		            <goals>
+		              <goal>cobertura</goal>
 		              <goal>clean</goal>
 		              <goal>check</goal>
 		            </goals>
@@ -432,6 +433,7 @@
 				<configuration>
 					<formats>
 						<format>html</format>
+						<format>xml</format>
 					</formats>
 				</configuration>
 			</plugin>
