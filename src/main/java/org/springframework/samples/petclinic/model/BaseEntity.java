@@ -26,6 +26,11 @@ import javax.persistence.MappedSuperclass;
  * @author Ken Krebs
  * @author Juergen Hoeller
  */
+
+
+
+/** added comment*/
+
 @MappedSuperclass
 public class BaseEntity {
     @Id
