@@ -29,7 +29,7 @@ import javax.persistence.MappedSuperclass;
 
 
 
-/** added comment*/
+/** added comment .............*/
 
 @MappedSuperclass
 public class BaseEntity {
