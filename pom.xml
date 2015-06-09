@@ -437,6 +437,12 @@
 						<goals>
 							<goal>jmeter</goal>
 						</goals>
+						<configuration>
+                                <testResultsTimestamp>false</testResultsTimestamp>
+                                <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
+                                <suppressJMeterOutput>false</suppressJMeterOutput>
+                                <jmeterLogLevel>DEBUG</jmeterLogLevel>
+                            </configuration>
 					</execution>
 				</executions>
 			</plugin>
