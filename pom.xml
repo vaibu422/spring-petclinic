@@ -438,6 +438,7 @@
 							<goal>jmeter</goal>
 						</goals>
 						<configuration>
+						        <ignoreResultFailures>true</ignoreResultFailures>
                                 <testResultsTimestamp>false</testResultsTimestamp>
                                 <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
                                 <suppressJMeterOutput>false</suppressJMeterOutput>
