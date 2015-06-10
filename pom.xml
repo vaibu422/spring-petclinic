@@ -71,11 +71,12 @@
 	</properties>
 	
 	<distributionManagement>
-      <repository>
-        <id>project-release</id>
-        <name>project-release</name>
-        <url>http://10.63.39.118:8081/artifactory/project-release</url>
-      </repository>
+    <snapshotRepository>
+        <id>liacs118</id>
+        <name>liacs118-snapshots</name>
+        <url>http://10.63.39.118:8081/artifactory/ext-snapshot-local</url>
+    </snapshotRepository>
+
     </distributionManagement>
 
 	<dependencies>
