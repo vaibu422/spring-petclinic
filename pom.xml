@@ -69,6 +69,14 @@
 		<cobertura.version>2.7</cobertura.version>
 
 	</properties>
+	
+	<distributionManagement>
+      <repository>
+        <id>project-release</id>
+        <name>project-release</name>
+        <url>http://10.63.39.118:8081/artifactory/project-release</url>
+      </repository>
+    </distributionManagement>
 
 	<dependencies>
 		<dependency>
@@ -324,7 +332,38 @@
 		    <directory>${project.basedir}/src/test/resources</directory>
 		  </testResource>
 		</testResources>
+		
 		<plugins>
+			<!-- <plugin>
+	            <groupId>org.jfrog.buildinfo</groupId>
+	            <artifactId>artifactory-maven-plugin</artifactId>
+	            <version>2.3.0</version>
+	            <inherited>false</inherited>
+	            <executions>
+	                <execution>
+	                    <id>build-info</id>
+	                    <goals>
+	                        <goal>publish</goal>
+	                    </goals>
+	                    <configuration>
+	                        <deployProperties>
+							    <groupId>devOps.test</groupId>
+								<artifactId>petclinic</artifactId>
+								<version>1.0</version>
+	                        </deployProperties>
+	                        <publisher>
+	                            <contextUrl>http://10.63.39.118:8081/artifactory</contextUrl>
+	                            <username>admin</username>
+	                            <password>password</password>
+	                            <repoKey/>
+	                            <snapshotRepoKey>project-release</snapshotRepoKey>
+	                        </publisher>
+	                    </configuration>
+	                </execution>
+	            </executions>
+	        </plugin>
+          -->
+		
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -435,6 +474,7 @@
 						<id>jmeter-tests</id>
 						<phase>verify</phase>
 						<goals>
+						   
 							<goal>jmeter</goal>
 						</goals>
 						<configuration>
@@ -447,7 +487,9 @@
 					</execution>
 				</executions>
 			</plugin>
-         
+			
+			
+		
 		</plugins>
 	</build>
 		<reporting>
