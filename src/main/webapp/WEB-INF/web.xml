@@ -68,6 +68,18 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <servlet-name>dandelionServlet</servlet-name>
         <url-pattern>/dandelion-assets/*</url-pattern>
     </servlet-mapping>
+ 
+ <!-- Added by me -->
+	<servlet>
+		<servlet-name>datatablesController</servlet-name>
+		<servlet-class>com.github.dandelion.datatables.extras.servlet2.servlet.DatatablesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>datatablesController</servlet-name>
+		<url-pattern>/datatablesController/*</url-pattern>
+	</servlet-mapping>
+	
+	
     
     <!-- used to provide the ability to enter Chinese characters inside the Owner Form -->    
     <filter>

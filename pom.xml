@@ -69,14 +69,6 @@
 		<cobertura.version>2.7</cobertura.version>
 
 	</properties>
-	
-	<distributionManagement>
-    <snapshotRepository>
-        <id>liacs118</id>
-        <name>liacs118-snapshots</name>
-        <url>http://10.63.39.118:8081/artifactory/project-snapshot</url>
-    </snapshotRepository>
-    </distributionManagement>
 
 	<dependencies>
 		<dependency>
@@ -308,6 +300,27 @@
 		</dependency>
 
 		<!-- Dandelion -->
+
+	<dependency>
+		<groupId>com.github.dandelion</groupId>
+		<artifactId>datatables-core</artifactId>
+		<version>0.10.1</version>
+	</dependency>
+	
+	<dependency>
+	<groupId>com.github.dandelion</groupId>
+	<artifactId>datatables-servlet2</artifactId>
+	<version>0.9.3</version>
+</dependency>
+	
+
+	<dependency>
+		<groupId>com.github.dandelion</groupId>
+		<artifactId>datatables-jsp</artifactId>
+		<version>0.10.0</version>
+	</dependency>
+	
+		
 		<dependency>
 			<groupId>com.github.dandelion</groupId>
 			<artifactId>datatables-jsp</artifactId>
@@ -318,7 +331,58 @@
 			<artifactId>datatables-export-itext</artifactId>
 			<version>${dandelion.version}</version>
 		</dependency>
+
+
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+	</dependency>
+	
+	<dependency>
+	<groupId>javax.servlet.jsp.jstl</groupId>
+	<artifactId>jstl-api</artifactId>
+	<version>1.2</version>
+</dependency>
+	
+	
+	<dependency>
+	<groupId>commons-beanutils</groupId>
+	<artifactId>commons-beanutils</artifactId>
+	<version>1.9.2</version>
+</dependency>
+	
+	
+	<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-annotations</artifactId>
+	<version>2.5.0</version>
+</dependency>
+	
+	<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-core</artifactId>
+	<version>2.5.0</version>
+</dependency>
+	
+	<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-databind</artifactId>
+	<version>2.5.0</version>
+</dependency>
+	
+<dependency>
+	<groupId>com.googlecode.json-simple</groupId>
+	<artifactId>json-simple</artifactId>
+	<version>1.1.1</version>
+</dependency>
+
+	
 	</dependencies>
+
+
+
+
 
 	<!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
 	<build>
@@ -334,36 +398,6 @@
 		</testResources>
 		
 		<plugins>
-			<!-- <plugin>
-	            <groupId>org.jfrog.buildinfo</groupId>
-	            <artifactId>artifactory-maven-plugin</artifactId>
-	            <version>2.3.0</version>
-	            <inherited>false</inherited>
-	            <executions>
-	                <execution>
-	                    <id>build-info</id>
-	                    <goals>
-	                        <goal>publish</goal>
-	                    </goals>
-	                    <configuration>
-	                        <deployProperties>
-							    <groupId>devOps.test</groupId>
-								<artifactId>petclinic</artifactId>
-								<version>1.0</version>
-	                        </deployProperties>
-	                        <publisher>
-	                            <contextUrl>http://10.63.39.118:8081/artifactory</contextUrl>
-	                            <username>admin</username>
-	                            <password>password</password>
-	                            <repoKey/>
-	                            <snapshotRepoKey>project-release</snapshotRepoKey>
-	                        </publisher>
-	                    </configuration>
-	                </execution>
-	            </executions>
-	        </plugin>
-          -->
-		
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
