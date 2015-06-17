@@ -1,5 +1,6 @@
 package org.springframework.samples.petclinic.test;
 
+
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -8,7 +9,6 @@ import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-
 
 public class SeleniumTestForPC {
 
@@ -25,25 +25,8 @@ public class SeleniumTestForPC {
 	  }
 
 	  @Test
-	  public void testMytestpc() throws Exception {
+	  public void testMyseltest1() throws Exception {
 	    driver.get(baseUrl + "/petclinic/");
-	    driver.findElement(By.linkText("Find owners")).click();
-	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-	    driver.findElement(By.linkText("Test 1")).click();
-	    driver.findElement(By.linkText("Edit Pet")).click();
-	    new Select(driver.findElement(By.id("type"))).selectByVisibleText("dog");
-	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-	    driver.findElement(By.linkText("Add Visit")).click();
-	    driver.findElement(By.id("description")).clear();
-	    driver.findElement(By.id("description")).sendKeys("for checkup to mydog");
-	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-	    driver.findElement(By.linkText("Add New Pet")).click();
-	    new Select(driver.findElement(By.id("type"))).selectByVisibleText("cat");
-	    driver.findElement(By.id("birthDate")).click();
-	    driver.findElement(By.linkText("1")).click();
-	    driver.findElement(By.id("name")).clear();
-	    driver.findElement(By.id("name")).sendKeys("mycat");
-	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 	    driver.findElement(By.linkText("Find owners")).click();
 	    driver.findElement(By.linkText("Add Owner")).click();
 	    driver.findElement(By.id("firstName")).clear();
@@ -55,21 +38,31 @@ public class SeleniumTestForPC {
 	    driver.findElement(By.id("city")).clear();
 	    driver.findElement(By.id("city")).sendKeys("bangalore");
 	    driver.findElement(By.id("telephone")).clear();
-	    driver.findElement(By.id("telephone")).sendKeys("9008630729");
+	    driver.findElement(By.id("telephone")).sendKeys("776444");
+	    driver.findElement(By.id("telephone")).clear();
+	    driver.findElement(By.id("telephone")).sendKeys("7764441344");
 	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 	    driver.findElement(By.linkText("Add New Pet")).click();
-	    new Select(driver.findElement(By.id("type"))).selectByVisibleText("bird");
 	    driver.findElement(By.id("name")).clear();
-	    driver.findElement(By.id("name")).sendKeys("barun bird");
+	    driver.findElement(By.id("name")).sendKeys("mycat");
 	    driver.findElement(By.id("birthDate")).click();
-	    driver.findElement(By.linkText("7")).click();
+	    driver.findElement(By.linkText("1")).click();
+	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+	    new Select(driver.findElement(By.id("type"))).selectByVisibleText("bird");
+	    new Select(driver.findElement(By.id("type"))).selectByVisibleText("cat");
 	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 	    driver.findElement(By.linkText("Add Visit")).click();
 	    driver.findElement(By.id("description")).clear();
-	    driver.findElement(By.id("description")).sendKeys("consultation with doctor");
+	    driver.findElement(By.id("description")).sendKeys("ewrrq");
 	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 	    driver.findElement(By.linkText("Veterinarians")).click();
-	    driver.findElement(By.linkText("Error")).click();
+	    driver.findElement(By.cssSelector("input[type=\"text\"]")).clear();
+	    driver.findElement(By.cssSelector("input[type=\"text\"]")).sendKeys("leary");
+	    driver.findElement(By.cssSelector("th")).click();
+	    driver.findElement(By.linkText("Find owners")).click();
+	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+	    driver.findElement(By.cssSelector("input[type=\"text\"]")).clear();
+	    driver.findElement(By.cssSelector("input[type=\"text\"]")).sendKeys("barun");
 	  }
 
 	  @After
