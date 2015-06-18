@@ -185,12 +185,12 @@
 		See here for more details on commons-dbcp versus tomcat-jdbc: 
     	http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/
     -->
-		<!-- <dependency>
+		 <dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jdbc</artifactId>
 			<version>${tomcat-jdbc.version}</version>
 			<scope>runtime</scope>
-		</dependency> -->
+		</dependency> 
 
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
@@ -396,7 +396,11 @@
 	<version>2.45.0</version>
 </dependency>
 
-
+<dependency>
+     <groupId>javax.servlet</groupId>
+     <artifactId>javax.servlet-api</artifactId>
+     <version>3.0.1</version>
+</dependency>
 
 <dependency>
 	<groupId>xml-apis</groupId>
