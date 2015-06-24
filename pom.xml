@@ -185,7 +185,7 @@
 		See here for more details on commons-dbcp versus tomcat-jdbc: 
     	http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/
     -->
-		 <dependency>
+		  <dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jdbc</artifactId>
 			<version>${tomcat-jdbc.version}</version>
@@ -554,12 +554,12 @@
 				<version>1.10.1</version>
 				<executions>
 					<execution>
-						<id>jmeter-tests</id>
+						<!-- <id>jmeter-tests</id>
 						<phase>verify</phase>
 						<goals>
 						   
 							<goal>jmeter</goal>
-						</goals>
+						</goals> -->
 						<configuration>
 						        <ignoreResultFailures>true</ignoreResultFailures>
                                 <testResultsTimestamp>false</testResultsTimestamp>
