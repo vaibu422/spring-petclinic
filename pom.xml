@@ -566,6 +566,7 @@
                                 <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
                                 <suppressJMeterOutput>false</suppressJMeterOutput>
                                 <jmeterLogLevel>DEBUG</jmeterLogLevel>
+                                <skipTests>${skipTests}</skipTests>
                             </configuration>
 					</execution>
 				</executions>
