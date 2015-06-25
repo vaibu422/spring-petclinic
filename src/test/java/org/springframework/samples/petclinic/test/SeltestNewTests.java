@@ -22,6 +22,7 @@ public class SeltestNewTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
+  
   @Test
   public void testSeltestNew() throws Exception {
     driver.get(baseUrl + "/petclinic/");
