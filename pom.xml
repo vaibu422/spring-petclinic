@@ -552,7 +552,7 @@
 				<groupId>com.lazerycode.jmeter</groupId>
 				<artifactId>jmeter-maven-plugin</artifactId>
 				<version>1.10.1</version>
-				<executions>
+				<!-- <executions>
 					<execution>
 						 <id>jmeter-tests</id>
 						<phase>verify</phase>
@@ -568,7 +568,7 @@
                                 <skipTests>${skipTests}</skipTests>
                             </configuration>
 					</execution>
-				</executions>
+				</executions> -->
 			</plugin> 
 			
 			
