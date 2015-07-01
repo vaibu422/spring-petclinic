@@ -51,8 +51,8 @@
         </CookieManager>
         <hashTree/>
         <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="User Count" enabled="true">
-          <stringProp name="CounterConfig.start">1</stringProp>
-          <stringProp name="CounterConfig.end">10</stringProp>
+          <stringProp name="CounterConfig.start">11</stringProp>
+          <stringProp name="CounterConfig.end">20</stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
           <stringProp name="CounterConfig.name">count</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
@@ -60,8 +60,8 @@
         </CounterConfig>
         <hashTree/>
         <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Pet Count" enabled="true">
-          <stringProp name="CounterConfig.start">1</stringProp>
-          <stringProp name="CounterConfig.end">13</stringProp>
+          <stringProp name="CounterConfig.start">14</stringProp>
+          <stringProp name="CounterConfig.end">25</stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
           <stringProp name="CounterConfig.name">petCount</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
