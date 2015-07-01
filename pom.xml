@@ -433,6 +433,44 @@
 
 
 
+
+<profiles>
+        <!-- Jenkins by default defines a property BUILD_NUMBER which is used to enable the profile. -->
+        <profile>
+            <id>jenkins</id>
+            <activation>
+                <property>
+                    <name>env.BUILD_NUMBER</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>cobertura-maven-plugin</artifactId>
+                        <version>2.7</version>
+                        <configuration>
+                            <formats>
+                                <format>xml</format>
+                            </formats>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>cobertura</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+
+
+
 	<!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
 	<build>
 		<defaultGoal>install</defaultGoal>
@@ -515,17 +553,8 @@
 					</descriptorRefs>
 				</configuration>
 			</plugin>
-			<!-- <plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<server>tomcat-development-server</server>
-					<port>9966</port>
-					<path>/petclinic</path>
-				</configuration>
-			</plugin> -->
-			 <plugin>
+			
+			<!--  <plugin>
 		        <groupId>org.codehaus.mojo</groupId>
 		        <artifactId>cobertura-maven-plugin</artifactId>
 				<version>${cobertura.version}</version>
@@ -538,13 +567,11 @@
 		          <execution>
 		          <phase>package</phase>
 		            <goals>
-		              <goal>clean</goal>
 		              <goal>cobertura</goal>
-		             <!--  <goal>check</goal> -->
 		            </goals>
 		          </execution>
 		        </executions>
-         </plugin>
+         </plugin> -->
 	<plugin>
 		<groupId>org.codehaus.mojo</groupId>
 		<artifactId>findbugs-maven-plugin</artifactId>
@@ -573,14 +600,11 @@
 					</execution>
 				</executions> 
 			</plugin> 
-			
-			
-		
 		</plugins>
 	</build>
+	
 		<reporting>
 		<plugins>
-		 
 			<!--  integrate maven-cobertura-plugin to project site  -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -588,43 +612,38 @@
 				<version>${cobertura.version}</version>
 				<configuration>
 					<formats>
-						<format>html</format>
 						<format>xml</format>
+						<format>html</format>
 					</formats>
 				</configuration>
 			</plugin>
-
-
 	<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-pmd-plugin</artifactId>
 		<version>3.4</version>
 	</plugin>
-   
-   <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>findbugs-maven-plugin</artifactId>
-      <version>3.0.0</version>
-      <configuration>
-        <skip>true</skip>
-      </configuration>
-    </plugin>
-    
-    <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-checkstyle-plugin</artifactId>
-         <version>2.10</version>
-      </plugin>
-      
-      <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-surefire-report-plugin</artifactId>
-         <version>2.13</version>
-      </plugin>
+
+	<plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>findbugs-maven-plugin</artifactId>
+		<version>3.0.0</version>
+		<configuration>
+			<skip>true</skip>
+		</configuration>
+	</plugin>
+
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-checkstyle-plugin</artifactId>
+		<version>2.10</version>
+	</plugin>
+
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-report-plugin</artifactId>
+		<version>2.13</version>
+	</plugin>
 		</plugins>
 	</reporting>
-	
-	
-
 	<url>demopetclinic</url>
 </project>
