@@ -18,7 +18,7 @@ public class SeltestNewTests {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://10.63.39.119:8085";
+    baseUrl = "http://10.63.39.118:8180";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
