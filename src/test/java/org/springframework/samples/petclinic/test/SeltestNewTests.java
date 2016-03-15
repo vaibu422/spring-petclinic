@@ -1,5 +1,9 @@
 package org.springframework.samples.petclinic.test;
 
+import static org.junit.Assert.fail;
+
+import java.util.concurrent.TimeUnit;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,23 +15,35 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SeltestNewTests {
-    private WebDriver driver;
-    private String baseUrl;
-    private boolean acceptNextAlert = true;
-    private StringBuffer verificationErrors = new StringBuffer();
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
 
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://10.63.39.118:8182";
-    //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   
   @Test
   public void testSeltestNew() throws Exception {
-   driver.get(baseUrl + "/petclinic/");
-   
+    driver.get(baseUrl + "/petclinic/");
+    driver.findElement(By.linkText("Find owners")).click();
+    driver.findElement(By.linkText("Add Owner")).click();
+    driver.findElement(By.id("firstName")).clear();
+    driver.findElement(By.id("firstName")).sendKeys("ranjeet");
+    driver.findElement(By.id("lastName")).clear();
+    driver.findElement(By.id("lastName")).sendKeys("sinha");
+    driver.findElement(By.id("address")).clear();
+    driver.findElement(By.id("address")).sendKeys("marathalli");
+    driver.findElement(By.id("city")).clear();
+    driver.findElement(By.id("city")).sendKeys("bangalore");
+    driver.findElement(By.id("telephone")).clear();
+    driver.findElement(By.id("telephone")).sendKeys("9008630725");
+    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
   }
 
   @After
@@ -72,3 +88,4 @@ public class SeltestNewTests {
     }
   }
 }
+
