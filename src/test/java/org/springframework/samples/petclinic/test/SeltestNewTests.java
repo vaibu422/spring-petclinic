@@ -20,7 +20,7 @@ public class SeltestNewTests {
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://10.63.39.118:8182";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   
