@@ -24,7 +24,7 @@ public class SeltestNewTests {
 
   @Before
   public void setUp() throws Exception {
-    System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver"); 
+    System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.sh"); 
 // Initialize browser 
  driver=new ChromeDriver();
     //driver = new FirefoxDriver();
