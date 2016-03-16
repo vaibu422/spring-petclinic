@@ -25,6 +25,7 @@ public class SeltestNewTests {
     driver = new FirefoxDriver();
     baseUrl = "http://10.63.39.118:8182";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    Thread.sleep(10000);
   }
 
   
