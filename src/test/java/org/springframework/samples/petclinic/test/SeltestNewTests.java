@@ -22,8 +22,12 @@ public class SeltestNewTests {
 
   @Before
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+    System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe"); 
+// Initialize browser 
+ driver=new ChromeDriver();
+    //driver = new FirefoxDriver();
     baseUrl = "http://10.63.39.118:8182";
+    
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(10000);
   }
