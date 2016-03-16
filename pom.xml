@@ -387,31 +387,31 @@
 <dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-java</artifactId>
-	<version>2.46.0</version>
+	<version>2.43.0</version>
 </dependency>
 
 <dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-firefox-driver</artifactId>
-	<version>2.46.0</version>
+	<version>2.43.0</version>
 </dependency>
 
 <dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-server</artifactId>
-	<version>2.46.0</version>
+	<version>2.43.0</version>
 </dependency>
 
 <dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-remote-driver</artifactId>
-	<version>2.46.0</version>
+	<version>2.43.0</version>
 </dependency>
 
 <dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-htmlunit-driver</artifactId>
-	<version>2.46.0</version>
+	<version>2.43.0</version>
 </dependency>
 
 
