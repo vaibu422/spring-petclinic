@@ -14,6 +14,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 
 
 public class SeltestNewTests {
@@ -29,7 +30,8 @@ public class SeltestNewTests {
  //driver=new ChromeDriver();
     driver = new FirefoxDriver();
     baseUrl = "http://10.63.39.118:8182";
-    
+    FirefoxBinary binary = new FirefoxBinary(new File("/usr/local/bin/firefox"));
+    binary.setEnvironmentProperty("DISPLAY",System.getProperty("lmportal.xvfb.id",":99"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(10000);
   }
