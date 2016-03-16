@@ -28,10 +28,11 @@ public class SeltestNewTests {
     System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.sh"); 
 // Initialize browser 
  //driver=new ChromeDriver();
-    driver = new FirefoxDriver();
+    
     baseUrl = "http://10.63.39.118:8182";
     FirefoxBinary binary = new FirefoxBinary(new File("/usr/local/bin/firefox"));
     binary.setEnvironmentProperty("DISPLAY",System.getProperty("lmportal.xvfb.id",":99"));
+    driver = new FirefoxDriver(binary,null);
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(10000);
   }
