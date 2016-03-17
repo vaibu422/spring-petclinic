@@ -30,9 +30,10 @@ public class SeltestNewTests {
  //driver=new ChromeDriver();
     
     baseUrl = "http://10.63.39.118:8182";
-    FirefoxBinary binary = new FirefoxBinary(new File("/usr/local/bin/firefox"));
-    binary.setEnvironmentProperty("DISPLAY",System.getProperty("lmportal.xvfb.id",":99"));
-    driver = new FirefoxDriver(binary,null);
+    //FirefoxBinary binary = new FirefoxBinary(new File("/usr/local/bin/firefox"));
+    //binary.setEnvironmentProperty("DISPLAY",System.getProperty("lmportal.xvfb.id",":99"));
+    //driver = new FirefoxDriver(binary,null);
+    driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(10000);
   }
