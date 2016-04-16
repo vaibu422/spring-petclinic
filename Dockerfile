@@ -1,4 +1,4 @@
-FROM tutum/tomcat
+FROM tomcat
 
 RUN rm -rf /tomcat/webapps/*
 
