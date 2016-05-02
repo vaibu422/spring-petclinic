@@ -10,5 +10,5 @@ FROM tomcat
 
 #ADD http://10.63.39.117:8081/artifactory/api/storage/libs-snapshot-local/org/springframework/samples/spring-petclinic/1.0.0-SNAPSHOT/spring-petclinic-1.0.0-20160416.092617-2.war petclinic.war
 
-CMD ["catalina.sh", "run" && tail -f /usr/local/tomcat/logs/catalina.log]
+CMD ["catalina.sh", "run"]
 
