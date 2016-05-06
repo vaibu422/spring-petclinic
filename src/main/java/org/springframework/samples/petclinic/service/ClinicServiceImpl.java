@@ -57,7 +57,8 @@ public class ClinicServiceImpl implements ClinicService {
     @Override
     @Transactional(readOnly = true)
     public Collection<PetType> findPetTypes() throws DataAccessException {
-        return petRepository.findPetTypes();
+        throw new RuntimeException("For Testing");
+        //return petRepository.findPetTypes();
     }
 
     @Override
