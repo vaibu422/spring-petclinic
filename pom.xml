@@ -514,9 +514,9 @@
 					<includes> 
  						<include>**/*Tests.java</include> 
 					</includes>					 
-<!-- 					<suiteXmlFiles>
+					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>-->
+					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 			<plugin>
