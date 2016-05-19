@@ -511,12 +511,12 @@
 				<version>2.13</version>
 				<inherited>true</inherited>
 				<configuration>
-<!-- 					<includes> -->
-<!-- 						<include>**/*Tests.java</include> -->
-<!-- 					</includes>					 -->
-					<suiteXmlFiles>
+					<includes> 
+ 						<include>**/*Tests.java</include> 
+					</includes>					 
+<!-- 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
+					</suiteXmlFiles>-->
 				</configuration>
 			</plugin>
 			<plugin>
