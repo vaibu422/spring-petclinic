@@ -27,6 +27,9 @@ public class SeltestNewTests {
     //driver = new FirefoxDriver();
     //Create instance of PhantomJS driver
     DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
+    capabilities.setJavascriptEnabled(true);  
+    capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "/usr/local/bin/phantomjs");
+                
     PhantomJSDriver driver = new PhantomJSDriver(capabilities);
  
     baseUrl = "http://10.63.37.100:8800";
