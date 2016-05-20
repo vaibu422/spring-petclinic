@@ -18,7 +18,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 
 public class SeltestNewTests {
-  private WebDriver driver;
+  //private WebDriver driver;
+  private PhantomJSDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -31,7 +32,7 @@ public class SeltestNewTests {
     capabilities.setJavascriptEnabled(true);  
     capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "/usr/local/bin/phantomjs");
                 
-    PhantomJSDriver driver = new PhantomJSDriver(capabilities);
+    driver = new PhantomJSDriver(capabilities);
  
     baseUrl = "http://10.63.37.100:8800";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
