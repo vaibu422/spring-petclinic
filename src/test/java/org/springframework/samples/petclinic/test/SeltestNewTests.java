@@ -13,6 +13,8 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class SeltestNewTests {
   private WebDriver driver;
@@ -22,7 +24,11 @@ public class SeltestNewTests {
 
   @Before
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+    //driver = new FirefoxDriver();
+    //Create instance of PhantomJS driver
+    DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
+    PhantomJSDriver driver = new PhantomJSDriver(capabilities);
+ 
     baseUrl = "http://10.63.37.100:8800";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
