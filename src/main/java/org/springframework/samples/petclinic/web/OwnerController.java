@@ -35,6 +35,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import cucumber.api.java.en.When;
+
 /**
  * @author Juergen Hoeller
  * @author Ken Krebs

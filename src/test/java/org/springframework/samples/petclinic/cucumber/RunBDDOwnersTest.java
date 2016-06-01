@@ -13,7 +13,8 @@ import cucumber.api.junit.Cucumber;
  *
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(monochrome=true, features="classpath:owners.feature", dryRun=false, format={"pretty"})
+@CucumberOptions(monochrome=true, features="classpath:owners.feature", dryRun=false,
+glue= "org.springframework.samples.petclinic.cucumber" , format={"pretty"})
 public class RunBDDOwnersTest {
 
 }
