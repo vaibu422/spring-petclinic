@@ -30,6 +30,10 @@ import org.springframework.samples.petclinic.model.Visit;
 import org.springframework.samples.petclinic.util.EntityUtils;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner; 
+import org.junit.runner.RunWith;
+
 
 /**
  * <p> Base class for {@link ClinicService} integration tests. </p> <p> Subclasses should specify Spring context
@@ -50,7 +54,10 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Sam Brannen
  * @author Michael Isvy
  */
-public abstract class AbstractClinicServiceTests {
+@ContextConfiguration(locations = {"classpath:spring/business-config.xml"})
+@RunWith(SpringJUnit4ClassRunner.class)
+@ActiveProfiles("jdbc")
+public  class AbstractClinicServiceTests {
 
     @Autowired
     protected ClinicService clinicService;
