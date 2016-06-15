@@ -13,24 +13,24 @@
 // * See the License for the specific language governing permissions and
 // * limitations under the License.
 // */
-//package org.springframework.samples.petclinic.service;
-//
-//import org.junit.runner.RunWith;
-//import org.springframework.test.context.ActiveProfiles;
-//import org.springframework.test.context.ContextConfiguration;
-//import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-//
-///**
-// * <p> Integration test using the jdbc profile. 
-// * @see AbstractClinicServiceTests AbstractClinicServiceTests for more details. </p>
-// *
-// * @author Thomas Risberg
-// * @author Michael Isvy
-// */
-//@ContextConfiguration(locations = {"classpath:spring/business-config.xml"})
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ActiveProfiles("jdbc")
-//public class ClinicServiceJdbcTests extends AbstractClinicServiceTests {
-//
-//
-//}
+package org.springframework.samples.petclinic.service;
+
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+/**
+ * <p> Integration test using the jdbc profile. 
+ * @see AbstractClinicServiceTests AbstractClinicServiceTests for more details. </p>
+ *
+ * @author Thomas Risberg
+ * @author Michael Isvy
+ */
+@ContextConfiguration(locations = {"classpath:spring/business-config.xml"})
+@RunWith(SpringJUnit4ClassRunner.class)
+@ActiveProfiles("jdbc")
+public class ClinicServiceJdbcTests extends AbstractClinicServiceTests {
+
+
+}
