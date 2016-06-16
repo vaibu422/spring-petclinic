@@ -61,7 +61,7 @@ import org.junit.runner.RunWith;
 @ContextConfiguration(locations = {"classpath:spring/business-config.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)
 @ActiveProfiles("jdbc")
-public  class AbstractClinicServiceTests {
+public  abstract class AbstractClinicServiceTests {
 
     @Autowired
     protected ClinicService clinicService;
