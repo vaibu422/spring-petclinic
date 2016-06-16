@@ -1,3 +1,7 @@
+package org.springframework.samples.petclinic.service; 
+
+
+
 /*
  * Copyright 2002-2013 the original author or authors.
  *
@@ -13,7 +17,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.service;
+
 
 import static org.assertj.core.api.Assertions.assertThat;
 
