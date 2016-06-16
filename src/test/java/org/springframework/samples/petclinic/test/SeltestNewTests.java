@@ -34,7 +34,7 @@ public class SeltestNewTests {
                 
     driver = new PhantomJSDriver(capabilities);
  
-    baseUrl = "http://10.63.37.100:8800";
+    baseUrl = "http://localhost:8180";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
