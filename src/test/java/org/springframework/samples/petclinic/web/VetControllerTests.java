@@ -38,7 +38,7 @@ public class VetControllerTests {
 
     private MockMvc mockMvc;
 
-    @Before
+   /* @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(vetController).build();
     }
@@ -49,5 +49,5 @@ public class VetControllerTests {
                 .andExpect(status().isOk());
     	actions.andExpect(content().contentType("application/json;charset=UTF-8"))
                 .andExpect(jsonPath("$.vetList[0].id").value(1));
-    }
+    }*/
 }
